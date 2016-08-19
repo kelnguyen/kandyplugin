@@ -1,6 +1,7 @@
 Author: Kelly Nguyen
 Description: Assignment 2 - Kandy Plugin creates a widget that displays a custom post type 
 Author URL: http://phoenix.sheridanc.on.ca/~ccit3665
+GitHub URL: https://github.com/kelnguyen
 
 Introduction
 ------------
@@ -36,8 +37,8 @@ Instructions
 	4. Save changes.
 	5. Visit site to see changes.
 
-Shortcode
----------
+Shortcode #1
+------------
 	I have created a shortcode called '[kandyshortcode]' which displays the posts from my custom post type 'Facts'. By typing in the shortcode in either a WordPress post or page, all the posts from 'Facts' will be displayed. 
 
 Instructions
@@ -46,3 +47,26 @@ Instructions
 	2. In the content area, type '[kandyshortcode]'.
 	3. Click 'update'.
 	4. Visit the post or page and the content under the custom post type called 'Facts' will be displayed. 
+    
+Shortcode #2
+------------
+    I have created an enclosing shortcode called [kandyshortcodebutton] [/kandyshortcodebutton]; this shortcode has four attributes you can alter directly from your WordPress:
+    link = the URL you would like the button to redirect others to
+    linktxt = the text that will read when users click the button
+    buttonbgcolor = the background color of the button
+    buttontxtcolor = the font color of your button text
+    buttonbordercolor = the color of your button border
+ 
+ Instructions
+ ------------
+   1. Replace the content within the quotation marks. 
+    
+    For example, in the shortcode:
+    [kandyshortcodebutton link="https://ca.linkedin.com/in/kellynguyen10" linktxt="Click here to connect with me on LinkedIn!" buttontxtcolor="#B7CECE" buttonbgcolor="#BBBAC6" buttonbordercolor="#6E7E85"]
+
+[/kandyshortcodebutton]
+
+    The link URL for https://ca.linkedin.com/in/kellynguyen10 can be replaced by a different website's URL. 
+
+    2. Click "update".
+    3. View your WordPress to see changes.

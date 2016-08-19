@@ -121,3 +121,25 @@ function kandy_custom_post_type() {
 endwhile;
     // NTS: 'category_name' = 'photography' 
 }    
+
+// button shortcode
+
+function kandyshortcodebutton($atts, $content = null) {
+    extract(shortcode_atts(
+        array ('link' => 'https://ca.linkedin.com/in/kellynguyen10',
+               'linktxt' => 'Click here to check out my LinkedIn!',
+               'buttonbgcolor' => '#D4E09B',
+               'buttontxtcolor' => '#383838',
+               'buttonbordercolor' => '#FCFFF7'
+              ), $atts
+    ));
+    return ' <style type ="text/css">
+        .kandyshortcodebutton p a.the-link {
+            background-color:' . $buttonbgcolor . ';
+            border-color: ' . $buttonbordercolor . ';
+            color:' . $buttontxtcolor . ';
+        }
+    </style> <div class="kandyshortcodebutton"><div class="link-txt">' . do_shortcode($content) . '</div><p><a href="' . $link . '" class="the-link">' . $linktxt . '</a></p></div>';
+}
+
+add_shortcode('kandyshortcodebutton', 'kandyshortcodebutton');
